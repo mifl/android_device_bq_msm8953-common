@@ -686,6 +686,11 @@ service time_daemon /system/vendor/bin/time_daemon
     user root
     group root
 
+service vppservice /vendor/bin/vppservice
+    class main
+    user media
+    group camera
+
 # FM enable/disable triggers
 on property:hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
