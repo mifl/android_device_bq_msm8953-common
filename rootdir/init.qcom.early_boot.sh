@@ -43,11 +43,6 @@ else
     soc_hwver=`cat /sys/devices/system/soc/soc0/platform_version` 2> /dev/null
 fi
 
-if [ -f /sys/class/graphics/fb0/virtual_size ]; then
-    res=`cat /sys/class/graphics/fb0/virtual_size` 2> /dev/null
-    fb_width=${res%,*}
-fi
-
 log -t BOOT -p i "MSM target '$1', SoC '$soc_hwplatform', HwID '$soc_hwid', SoC ver '$soc_hwver'"
 
 target=`getprop ro.board.platform`
