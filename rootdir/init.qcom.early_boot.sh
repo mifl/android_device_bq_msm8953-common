@@ -1,4 +1,5 @@
-#!/vendor/bin/sh
+#! /vendor/bin/sh
+
 # Copyright (c) 2012-2013,2016 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -25,6 +26,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+
+export PATH=/vendor/bin
 
 # Set platform variables
 if [ -f /sys/devices/soc0/hw_platform ]; then
